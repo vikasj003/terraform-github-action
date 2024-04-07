@@ -15,11 +15,11 @@ data "aws_ami" "amazon_linux_2" {
 }
 
 
-# resource "aws_instance" "example" {
-#   ami           = data.aws_ami.amazon_linux_2.id
-#   instance_type = var.instance_type
+resource "aws_instance" "example" {
+  ami           = data.aws_ami.amazon_linux_2.id
+  instance_type = var.instance_type
 
-#   tags = {
-#     Name = "Terraform-github-Action"
-#   }
-# }
+  tags = {
+    Name = "Terraform-github-Action"
+  }
+}
